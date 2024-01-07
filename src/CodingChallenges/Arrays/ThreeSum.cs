@@ -13,7 +13,9 @@ namespace CodingChallenges.MyArrays
     /// </summary>
     public class ThreeSum
     {
-        // Time Complexity: O(n^2). twoSumII is O(n), and we call it n times.
+        // Time Complexity: O(n^2) (complete is O(N*logN + N^2), only sorting is O(N*logN)). twoSumII is O(n), and we call it n times.
+        // Space complexity: Ignoring the space required for the output array, the space complexity of the above algorithm will be O(n)
+        //                   which is required for sorting.
         public static IList<IList<int>> threeSum(int[] nums)
         {
             const int target = 0;
@@ -22,7 +24,7 @@ namespace CodingChallenges.MyArrays
             if (nums.Length < 3)
                 return result;
 
-            Array.Sort(nums);
+            Array.Sort(nums); // O(N*logN)
 
             for (int i = 0; i < nums.Length - 2 && nums[i] <= target; i++)
             {
@@ -98,6 +100,45 @@ namespace CodingChallenges.MyArrays
             }
         }
 
+        // Java version from Grokking
+
+        //public static List<List<Integer>> searchTriplets(int[] arr)
+        //{
+        //    Arrays.sort(arr);
+        //    List<List<Integer>> triplets = new ArrayList<>();
+        //    for (int i = 0; i < arr.length - 2; i++)
+        //    {
+        //        if (i > 0 && arr[i] == arr[i - 1]) // skip same element to avoid duplicate triplets
+        //            continue;
+        //        searchPair(arr, -arr[i], i + 1, triplets);
+        //    }
+
+        //    return triplets;
+        //}
+
+        //private static void searchPair(int[] arr, int targetSum,
+        //                              int left, List<List<Integer>> triplets)
+        //{
+        //    int right = arr.length - 1;
+        //    while (left < right)
+        //    {
+        //        int currentSum = arr[left] + arr[right];
+        //        if (currentSum == targetSum)
+        //        { // found the triplet
+        //            triplets.add(Arrays.asList(-targetSum, arr[left], arr[right]));
+        //            left++;
+        //            right--;
+        //            while (left < right && arr[left] == arr[left - 1])
+        //                left++; // skip same element to avoid duplicate triplets
+        //            while (left < right && arr[right] == arr[right + 1])
+        //                right--; // skip same element to avoid duplicate triplets
+        //        }
+        //        else if (targetSum > currentSum)
+        //            left++; // we need a pair with a bigger sum
+        //        else
+        //            right--; // we need a pair with a smaller sum
+        //    }
+        //}
 
     }
 }

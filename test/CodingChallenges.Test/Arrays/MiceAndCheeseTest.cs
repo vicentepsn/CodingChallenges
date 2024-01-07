@@ -23,7 +23,7 @@
             var reward2 = new int[] { 1, 1 };
             int k = 2;
 
-            var expected = 15;
+            var expected = 2;
 
             var output = MiceAndCheese.MiceAndCheeseMaxReward(reward1, reward2, k);
 
@@ -38,6 +38,20 @@
             int k = 2;
 
             var expected = 50;
+
+            var output = MiceAndCheese.MiceAndCheeseMaxReward(reward1, reward2, k);
+
+            Assert.Equal(expected, output);
+        }
+
+        [Fact]
+        public void test04()
+        {
+            var reward1 = new int[] { 3, 3 };
+            var reward2 = new int[] { 3, 5 };
+            int k = 1;
+
+            var expected = 8;
 
             var output = MiceAndCheese.MiceAndCheeseMaxReward(reward1, reward2, k);
 

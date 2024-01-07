@@ -18,14 +18,15 @@ namespace CodingChallenges.Arrays
             public int MouseWinner;
         }
 
-        private static int compareRewardCompare(RewardCompare r1, RewardCompare r2)
+        private static int compareRewardDiffDesc(RewardCompare r1, RewardCompare r2)
         {
-            if (r1.Diff > r2.Diff)
-                return -1;
-            else if (r1.Diff < r2.Diff)
-                return 1;
-            else
-                return 0;
+            return r2.Diff.CompareTo(r1.Diff);
+            //if (r1.Diff > r2.Diff)
+            //    return -1;
+            //else if (r1.Diff < r2.Diff)
+            //    return 1;
+            //else
+            //    return 0;
         }
 
         public static int MiceAndCheeseMaxReward(int[] reward1, int[] reward2, int k)
@@ -47,7 +48,7 @@ namespace CodingChallenges.Arrays
                 }
             }
 
-            Array.Sort(rewardCompare, compareRewardCompare); // sort by bigger Diff
+            Array.Sort(rewardCompare, compareRewardDiffDesc); // sort by Diff descending
 
             int remainMouse1 = k;
 
