@@ -34,9 +34,9 @@
         [Fact]
         public void test03()
         {
-            int[][] input = new int[][]{ new int[] { 1, 6 },new int[] { 1, 8 }, new int[] { 1, 3 }, new int[] { 2, 3 },
-                new int[] { 1,10 },new int[] { 1,2 },new int[] { 1,5},new int[] { 2,2 },new int[] { 2,4 },
-                new int[] { 2,10 },new int[] { 1,7 },new int[] { 2,5 }};
+            int[][] input = [ [ 1, 6 ],[ 1, 8 ], [ 1, 3 ], [ 2, 3 ],
+                [1,10 ],[ 1,2 ],[ 1,5],[ 2,2 ],[ 2,4 ],
+                [ 2,10 ], [ 1,7 ],[2,5]];
             int n = 2;
 
             var obj = new CinemaSeatAllocation();

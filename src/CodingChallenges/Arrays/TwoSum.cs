@@ -30,5 +30,24 @@ namespace CodingChallenges.Arrays
 
             return null;
         }
+
+        public static int[] GetTwoSum_2(int[] nums, int target)
+        {
+            Dictionary<int, int> dict = [];
+
+            dict[nums[0]] = 0;
+
+            for (int i = 1; i < nums.Length; i++)
+            {
+                int diff = target - nums[i];
+                if (dict.ContainsKey(diff))
+                {
+                    return new[] { dict[diff], i };
+                }
+                dict[nums[i]] = i;
+            }
+
+            return null;
+        }
     }
 }

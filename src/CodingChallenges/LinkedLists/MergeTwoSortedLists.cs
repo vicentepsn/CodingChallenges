@@ -15,14 +15,14 @@ namespace CodingChallenges.LinkedLists
         //      the while loop runs for a number of iterations equal to the sum of the lengths of the two lists.
         //      All other work is constant, so the overall complexity is linear.
         // Space complexity : O(1) The iterative approach only allocates a few pointers, so it has a constant overall memory footprint.
-        public ListNode MergeTwoLists(ListNode list1, ListNode list2)
+        public SinglyLinkedListNode MergeTwoLists(SinglyLinkedListNode list1, SinglyLinkedListNode list2)
         {
-            var resultPointer = new ListNode(0);
+            var resultPointer = new SinglyLinkedListNode(0);
 
             var previous = resultPointer;
             while (list1 != null && list2 != null)
             {
-                if (list1.val < list2.val)
+                if (list1.data < list2.data)
                 {
                     previous.next = list1;
                     list1 = list1.next;
@@ -50,7 +50,7 @@ namespace CodingChallenges.LinkedLists
         //      mergeTwoLists per element in each list.Therefore, the time complexity is linear in the combined size of the lists.
         // Space complexity : O(n + m) The first call to mergeTwoLists does not return until the ends of both l1 and l2 have
         //      been reached, so n + m stack frames consume O(n + m) space.
-        public ListNode mergeTwoLists_recur(ListNode l1, ListNode l2)
+        public SinglyLinkedListNode mergeTwoLists_recur(SinglyLinkedListNode l1, SinglyLinkedListNode l2)
         {
             if (l1 == null)
             {
@@ -60,7 +60,7 @@ namespace CodingChallenges.LinkedLists
             {
                 return l1;
             }
-            else if (l1.val < l2.val)
+            else if (l1.data < l2.data)
             {
                 l1.next = mergeTwoLists_recur(l1.next, l2);
                 return l1;
@@ -73,15 +73,15 @@ namespace CodingChallenges.LinkedLists
 
         }
 
-        public ListNode mergeTwoLists(ListNode l1, ListNode l2)
+        public SinglyLinkedListNode mergeTwoLists(SinglyLinkedListNode l1, SinglyLinkedListNode l2)
         {
             // maintain an unchanging reference to node ahead of the return node.
-            ListNode prehead = new ListNode(-1);
+            SinglyLinkedListNode prehead = new SinglyLinkedListNode(-1);
 
-            ListNode prev = prehead;
+            SinglyLinkedListNode prev = prehead;
             while (l1 != null && l2 != null)
             {
-                if (l1.val <= l2.val)
+                if (l1.data <= l2.data)
                 {
                     prev.next = l1;
                     l1 = l1.next;

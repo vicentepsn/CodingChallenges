@@ -5,6 +5,51 @@ using System.Collections.Generic;
 //{
 public class Solution
 {
+    class NearbyItem
+    {
+        public int Index { get; set; }
+        public int Value { get; set; }
+        public NearbyItem(int index, int value) 
+        { 
+            Index = index;
+            Value = value;
+        }
+    }
+
+
+    class NearbyItemComparer : IComparer<NearbyItem>
+    {
+        public int Compare(NearbyItem x, NearbyItem y)
+        {
+            int compareValue = x.Value.CompareTo(y.Value);
+            if (compareValue != 0) 
+                return compareValue;
+            
+            return x.Index.CompareTo(y.Index);
+        }
+    }
+    public bool ContainsNearbyAlmostDuplicate(int[] nums, int indexDiff, int valueDiff)
+    {
+        //NearbyItem[] nearbyItems = new NearbyItem[nums.Length];
+        //for (int i = 0; i < nums.Length; i++)
+        //    nearbyItems[i] = new NearbyItem(i, nums[i]);
+
+        //var nearbyItemComparer = new NearbyItemComparer();
+
+        //Array.Sort(nearbyItems, nearbyItemComparer);
+
+        Dictionary<int, int> valueIndexPair = new Dictionary<int, int>();
+
+        for (int i = 0; i < nums.Length && i < indexDiff; i++)
+        {
+            int currValue = nums[i];
+        }
+
+
+        return false;
+    }
+
+
     // Coding challange from Microsoft(2023-04)
     public int solution(int[] A)
     {

@@ -6,38 +6,38 @@ namespace DataStructures.Extensions
 {
     public static class ListNodeExtension
     {
-        public static ListNode CloneData(ListNode ListNode) => new ListNode() { val = ListNode.val };
+        public static SinglyLinkedListNode CloneData(SinglyLinkedListNode ListNode) => new SinglyLinkedListNode() { data = ListNode.data };
 
-        public static ListNode ConvertArrayToLinkedList(this int[] arr)
+        public static SinglyLinkedListNode ConvertArrayToLinkedList(this int[] arr)
         {
             if (arr.Length == 0)
                 return null;
 
-            ListNode head = new ListNode()
+            SinglyLinkedListNode head = new SinglyLinkedListNode()
             {
-                val = arr[0]
+                data = arr[0]
             };
 
-            ListNode tail = head;
+            SinglyLinkedListNode tail = head;
 
             for (int i = 1; i < arr.Length; i++)
             {
-                ListNode ListNode = new ListNode() { val = arr[i] };
+                SinglyLinkedListNode ListNode = new SinglyLinkedListNode() { data = arr[i] };
                 tail.next = ListNode;
                 tail = ListNode;
             }
             return head;
         }
 
-        public static string ToStr(this ListNode ListNode)
+        public static string ToStr(this SinglyLinkedListNode ListNode)
         {
             if (ListNode == null)
                 return "";
-            var result = new StringBuilder($"[{ListNode.val}");
-            ListNode current = ListNode.next;
+            var result = new StringBuilder($"[{ListNode.data}");
+            SinglyLinkedListNode current = ListNode.next;
             while (current != null)
             {
-                result.Append($", {current.val}");
+                result.Append($", {current.data}");
                 current = current.next;
             }
             result.Append("]");

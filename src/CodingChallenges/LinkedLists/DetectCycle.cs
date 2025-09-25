@@ -11,7 +11,7 @@ namespace CodingChallenges.LinkedLists
     /// </summary>
     public class DetectCycle
     {
-        public Node detectCycle(Node head)
+        public DoubleLinkedListNode detectCycle(DoubleLinkedListNode head)
         {
             var tortoise = head;
             var hare = head;

@@ -16,9 +16,9 @@ namespace CodingChallenges.LinkedLists
         //      To reverse the second part of the list, one needs N/2 operations. The final step, to merge two lists,
         //      requires N/2 operations as well. In total, that results in O(N) time complexity.
         // Space complexity: O(1), since we do not allocate any additional data structures.
-        public void reorderList(ListNode head)
+        public void reorderList(SinglyLinkedListNode head)
         {
-            ListNode tortoise = head, hare = head;
+            SinglyLinkedListNode tortoise = head, hare = head;
 
             while (hare?.next?.next != null)
             {
@@ -26,7 +26,7 @@ namespace CodingChallenges.LinkedLists
                 tortoise = tortoise.next;
             }
 
-            ListNode prev = null;
+            SinglyLinkedListNode prev = null;
             var current = tortoise.next;
             tortoise.next = null;
 
@@ -41,7 +41,7 @@ namespace CodingChallenges.LinkedLists
             var l2 = prev;
             var l1 = head;
 
-            prev = new ListNode(0, null);
+            prev = new SinglyLinkedListNode(0, null);
             while (l2 != null)
             {
                 prev.next = l1;
@@ -58,13 +58,13 @@ namespace CodingChallenges.LinkedLists
 
 
         // Leetcode solution
-        public void reorderList_leetcode(ListNode head)
+        public void reorderList_leetcode(SinglyLinkedListNode head)
         {
             if (head == null) return;
 
             // find the middle of linked list [Problem 876]
             // in 1->2->3->4->5->6 find 4 
-            ListNode slow = head, fast = head;
+            SinglyLinkedListNode slow = head, fast = head;
             while (fast != null && fast.next != null)
             {
                 slow = slow.next;
@@ -74,7 +74,7 @@ namespace CodingChallenges.LinkedLists
             // reverse the second part of the list [Problem 206]
             // convert 1->2->3->4->5->6 into 1->2->3->4 and 6->5->4
             // reverse the second half in-place
-            ListNode prev = null, curr = slow, tmp;
+            SinglyLinkedListNode prev = null, curr = slow, tmp;
             while (curr != null)
             {
                 tmp = curr.next;
@@ -86,7 +86,7 @@ namespace CodingChallenges.LinkedLists
 
             // merge two sorted linked lists [Problem 21]
             // merge 1->2->3->4 and 6->5->4 into 1->6->2->5->3->4
-            ListNode first = head, second = prev;
+            SinglyLinkedListNode first = head, second = prev;
             while (second.next != null)
             {
                 tmp = first.next;

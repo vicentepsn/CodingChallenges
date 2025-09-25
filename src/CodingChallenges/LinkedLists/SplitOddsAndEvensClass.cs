@@ -22,13 +22,13 @@ namespace CodingChallenges.LinkedLists
             Console.WriteLine("This is a debug message");
         }
 
-        public static (Node OddHead, Node EvenHead) SplitIntoEvenAndOdd(Node head)
+        public static (DoubleLinkedListNode OddHead, DoubleLinkedListNode EvenHead) SplitIntoEvenAndOdd(DoubleLinkedListNode head)
         {
-            Node oddHead = null;
-            Node evenHead = null;
+            DoubleLinkedListNode oddHead = null;
+            DoubleLinkedListNode evenHead = null;
 
-            Node oddTail = null;
-            Node evenTail = null;
+            DoubleLinkedListNode oddTail = null;
+            DoubleLinkedListNode evenTail = null;
 
 
             var currentNode = head;

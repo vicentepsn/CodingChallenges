@@ -22,9 +22,9 @@ namespace CodingChallenges.LinkedLists
     {
 
 
-        public bool IsPalindrome(DataStructures.ListNode head)
+        public bool IsPalindrome(DataStructures.SinglyLinkedListNode head)
         {
-            DataStructures.ListNode rabbit = head,
+            DataStructures.SinglyLinkedListNode rabbit = head,
                 turtle = head,
                 reversenext = null;
 
@@ -38,7 +38,7 @@ namespace CodingChallenges.LinkedLists
                 turtle = newTurtle;
             }
 
-            DataStructures.ListNode fromMidle;
+            DataStructures.SinglyLinkedListNode fromMidle;
             if (rabbit?.next != null)
             {
                 var newTurtle = turtle.next;
@@ -53,7 +53,7 @@ namespace CodingChallenges.LinkedLists
 
             while (reversenext != null)
             {
-                if (reversenext.val != fromMidle.val)
+                if (reversenext.data != fromMidle.data)
                     return false;
 
                 reversenext = reversenext.next;
@@ -63,15 +63,15 @@ namespace CodingChallenges.LinkedLists
             return true;
         }
 
-        public bool IsPalindrome_v1(DataStructures.ListNode head)
+        public bool IsPalindrome_v1(DataStructures.SinglyLinkedListNode head)
         {
-            DataStructures.ListNode rabbit = head,
+            DataStructures.SinglyLinkedListNode rabbit = head,
                 turtle = head,
-                reversePointer = new DataStructures.ListNode();
+                reversePointer = new DataStructures.SinglyLinkedListNode();
 
             while (rabbit?.next?.next != null)
             {
-                var ListNode = new DataStructures.ListNode(turtle.val, reversePointer.next);
+                var ListNode = new DataStructures.SinglyLinkedListNode(turtle.data, reversePointer.next);
                 reversePointer.next = ListNode;
                 turtle = turtle.next;
 
@@ -80,7 +80,7 @@ namespace CodingChallenges.LinkedLists
 
             if (rabbit?.next != null)
             {
-                var ListNode = new DataStructures.ListNode(turtle.val, reversePointer.next);
+                var ListNode = new DataStructures.SinglyLinkedListNode(turtle.data, reversePointer.next);
                 reversePointer.next = ListNode;
             }
             var fromMidle = turtle.next;
@@ -89,7 +89,7 @@ namespace CodingChallenges.LinkedLists
 
             while (reversenext != null)
             {
-                if (reversenext.val != fromMidle.val)
+                if (reversenext.data != fromMidle.data)
                     return false;
 
                 reversenext = reversenext.next;
@@ -99,14 +99,14 @@ namespace CodingChallenges.LinkedLists
             return true;
         }
 
-        public bool IsPalindrome_BruteFroce(DataStructures.ListNode head)
+        public bool IsPalindrome_BruteFroce(DataStructures.SinglyLinkedListNode head)
         {
             var input = new List<int>();
 
             var ListNode = head;
             while (ListNode != null)
             {
-                input.Add(ListNode.val);
+                input.Add(ListNode.data);
                 ListNode = ListNode.next;
             }
 

@@ -2,7 +2,7 @@
 
 namespace CodingChallenges.LinkedLists
 {
-    public class ReverseList
+    public class ReverseDoubleLinkedList
     {
         /// <summary>
         /// Groups    : LinkedList
@@ -11,9 +11,9 @@ namespace CodingChallenges.LinkedLists
         /// Link      : https://leetcode.com/problems/reverse-linked-list/
         /// Approach  : -
         /// </summary>
-        public DataStructures.Node reverseList(DataStructures.Node head)
+        public DoubleLinkedListNode reverseList(DoubleLinkedListNode head)
         {
-            DataStructures.Node current = head, next, previous = null;
+            DoubleLinkedListNode current = head, next, previous = null;
 
             while (current != null)
             {

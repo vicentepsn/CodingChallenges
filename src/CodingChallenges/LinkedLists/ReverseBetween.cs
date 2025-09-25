@@ -11,9 +11,9 @@ namespace CodingChallenges.LinkedLists
     /// </summary>
     public class ReverseBetween
     {
-        public Node reverseBetween(Node head, int left, int right)
+        public DoubleLinkedListNode reverseBetween(DoubleLinkedListNode head, int left, int right)
         {
-            Node newHeadPointer = new Node() { left = head };
+            DoubleLinkedListNode newHeadPointer = new DoubleLinkedListNode() { left = head };
             var previous = newHeadPointer;
 
             var current = head;
@@ -46,7 +46,7 @@ namespace CodingChallenges.LinkedLists
             return newHeadPointer.left;
         }
         
-        public Node reverseBetween_udemy(Node head, int left, int right)
+        public DoubleLinkedListNode reverseBetween_udemy(DoubleLinkedListNode head, int left, int right)
         {
             var start = head;
             var current = head;
@@ -61,7 +61,7 @@ namespace CodingChallenges.LinkedLists
             }
 
             var tail = current;
-            Node newList = null;
+            DoubleLinkedListNode newList = null;
 
             while (currentPosition <= right)
             {
