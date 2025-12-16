@@ -61,6 +61,5 @@ namespace CodingChallenges.Strings
             // If all characters have a frequency of 0, this means that 't' is an anagram of 's'.
             return true;
         }
-
     }
 }

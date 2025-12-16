@@ -5,8 +5,8 @@
         [Fact]
         public void test01()
         {
-            int[][] input = new int[][]{ new int[] { 1, 2 },new int[] { 1, 3 }, new int[] { 1, 8 }, new int[] { 2, 6 },
-                new int[] { 3, 1 },new int[] { 3, 10 }};
+            int[][] input = { [1, 2], [1, 3 ], [ 1, 8 ], [ 2, 6 ],
+                [ 3, 1 ], [ 3, 10 ]};
             int n = 3;
 
             var obj = new CinemaSeatAllocation();

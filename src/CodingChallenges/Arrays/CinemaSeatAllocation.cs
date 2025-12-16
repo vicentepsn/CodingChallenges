@@ -14,7 +14,7 @@ public class CinemaSeatAllocation
     // O(r) / O(n)  => r: num of reserved seats
     public int MaxNumberOfFamilies1(int n, int[][] reservedSeats)
     {
-        int count = 2 * n;
+        int maxNumberOfFamilies = 2 * n;
 
         // Only (l)eft, (r)ight, (m)idle, (n)one, lm = 'left or midle' and mr = 'midle or right'
         var rowsAvailability = new Dictionary<int, string>();
@@ -28,7 +28,7 @@ public class CinemaSeatAllocation
 
             if (!rowsAvailability.ContainsKey(row))
             {
-                count--;
+                maxNumberOfFamilies--;
                 if (col <= 3)
                     rowsAvailability[row] = "mr";
                 else if (col >= 8)
@@ -61,15 +61,15 @@ public class CinemaSeatAllocation
                     || (rowsAvailability[row] == "m" && col >= 4 && col <= 7))
                 {
                     rowsAvailability[row] = "n";
-                    count--;
+                    maxNumberOfFamilies--;
                 }
             }
         }
 
-        return count;
+        return maxNumberOfFamilies;
     }
 
-    public int MaxNumberOfFamilies(int n, int[][] reservedSeats)
+    public int MaxNumberOfFamilies_(int n, int[][] reservedSeats)
     {
         var maxNumberOfFamilies = n * 2;
         Dictionary<int, bool[]> ocupiedBlocks = new Dictionary<int, bool[]>();
@@ -113,4 +113,59 @@ public class CinemaSeatAllocation
 
         return maxNumberOfFamilies;
     }
+
+    public int MaxNumberOfFamilies(int n, int[][] reservedSeats) // _refresh
+    {
+        const int MaxFamiliesPerRow = 2;
+        const int BlocksPerRow = 4;
+        int maxNumberOfFamilies = n * MaxFamiliesPerRow;
+        Dictionary<int, bool[]> reservedBlocks = []; // there are 4 blocks: left [1,2], left/midle [3,4], midle/right [5,6] and right [7,8]
+
+        foreach (int[] reservedSeat in reservedSeats)
+        {
+            int row = reservedSeat[0];
+            int seat = reservedSeat[1];
+
+            if (seat == 1 || seat == 10)
+                continue;
+
+            int reservedBlockInRow = (seat - 2) / 2;
+
+            reservedBlocks.TryGetValue(row, out bool[] rowReservedBlocks);
+
+            if (rowReservedBlocks == null)
+            {
+                rowReservedBlocks = new bool[BlocksPerRow];
+                rowReservedBlocks[reservedBlockInRow] = true;
+                reservedBlocks[row] = rowReservedBlocks;
+                maxNumberOfFamilies--;
+                continue;
+            }
+
+            if (rowReservedBlocks[RowBlocks.LeftMidle] && rowReservedBlocks[RowBlocks.MidleRight])
+                continue;
+
+            rowReservedBlocks[reservedBlockInRow] = true;
+
+            if ((rowReservedBlocks[RowBlocks.Left] && rowReservedBlocks[RowBlocks.MidleRight]) 
+                || (rowReservedBlocks[RowBlocks.LeftMidle] && rowReservedBlocks[RowBlocks.MidleRight])
+                || (rowReservedBlocks[RowBlocks.LeftMidle] && rowReservedBlocks[RowBlocks.Right]))
+            {
+                maxNumberOfFamilies--;
+                rowReservedBlocks[RowBlocks.LeftMidle] = true;
+                rowReservedBlocks[RowBlocks.MidleRight] = true;
+            }
+        }
+
+        return maxNumberOfFamilies;
+    }
+
+    static class RowBlocks
+    {
+        public const int Left = 0;
+        public const int LeftMidle = 1;
+        public const int MidleRight = 2;
+        public const int Right = 3;
+    }
+
 }
