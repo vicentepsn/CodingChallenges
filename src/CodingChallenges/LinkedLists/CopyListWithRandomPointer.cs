@@ -10,7 +10,7 @@ namespace CodingChallenges.LinkedLists;
 /// Companies : Facebook 66, Microsoft 15, Amazon 15, Bloomberg 4, Google 3 (2022-04-01)
 /// Doc       : docs/Copy List with Random Pointer.docx
 /// 
-/// Amazon PhoneScreen 2025-09-25
+/// Amazon PhoneScreen 2x em 2025-09-25 e 2025-12-08
 /// </summary>
 public class CopyListWithRandomPointer
 {

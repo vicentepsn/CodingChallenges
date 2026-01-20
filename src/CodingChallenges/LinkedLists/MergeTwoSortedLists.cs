@@ -1,4 +1,5 @@
 ﻿using DataStructures;
+using ListNode = DataStructures.SinglyLinkedListNodeII;
 
 namespace CodingChallenges.LinkedLists
 {
@@ -100,5 +101,38 @@ namespace CodingChallenges.LinkedLists
 
             return prehead.next;
         }
+
+        public ListNode MergeTwoLists__(ListNode a, ListNode b)
+        {
+            if (a == null) return b;
+            if (b == null) return a;
+
+            ListNode headPointer = new(0);
+
+            ListNode currNode = headPointer;
+            while (a != null && b != null)
+            {
+                if (a.val <= b.val)
+                {
+                    currNode.next = a;
+                    a = a.next;
+                }
+                else
+                {
+                    currNode.next = b;
+                    b = b.next;
+                }
+
+                currNode = currNode.next;
+            }
+
+            if (a != null && b == null)
+                currNode.next = a;
+            if (a == null && b != null)
+                currNode.next = b;
+
+            return headPointer.next;
+        }
+
     }
 }

@@ -24,6 +24,18 @@ public class SinglyLinkedListNode
     }
 }
 
+public class SinglyLinkedListNodeII
+{
+    public int val;
+    public SinglyLinkedListNodeII? next;
+    public SinglyLinkedListNodeII(int val = 0, SinglyLinkedListNodeII? next = null)
+    {
+        this.val = val;
+        this.next = next;
+    }
+}
+
+
 public class SinglyLinkedList
 {
     public SinglyLinkedListNode head;

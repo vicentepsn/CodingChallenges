@@ -1,5 +1,12 @@
 ﻿namespace Algoritmos.Search;
 
+/// <summary>
+/// Groups    : Binary Search
+/// Title     : 35. Search Insert Position
+/// Difficult : Easy
+/// Link      : https://leetcode.com/problems/search-insert-position
+/// Approachs : Binary Search
+/// </summary>
 public class BinarySearch
 {
     public static int Search(int[] vetor, int valor)
@@ -19,7 +26,27 @@ public class BinarySearch
                 fim = meio - 1;
         }
 
-        return -1; // Não encontrado
+        return ~inicio; // Não encontrado, retorna a posição de inserção invertida (valor negativo)
+    }
+
+    public static int SearchInsertPosition(int[] vetor, int valor)
+    {
+        int inicio = 0;
+        int fim = vetor.Length - 1;
+
+        while (inicio <= fim)
+        {
+            int meio = (inicio + fim) / 2;
+
+            if (vetor[meio] == valor)
+                return meio;
+            else if (valor > vetor[meio])
+                inicio = meio + 1;
+            else
+                fim = meio - 1;
+        }
+
+        return inicio; // Não encontrado
     }
 
     static void Main()

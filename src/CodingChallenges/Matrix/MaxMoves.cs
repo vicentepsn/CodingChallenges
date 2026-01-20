@@ -4,20 +4,20 @@
 // Descrição no projeto de entrevistas
 public class MaxMoves
 {
-    private static readonly char _initialPositionSimbol = 'R';
-    private static readonly char _blockSimbol = 'X';
-    private static readonly int _invalidRowOrColumn = -1;
+    private const char _initialPositionSimbol = 'R';
+    private const char _blockSimbol = 'X';
+    private const int _invalidRowOrColumn = -1;
 
-    private static readonly MatrixPosition[] _directions =
+    private static readonly Point[] _directions =
     {
-        new(row: -1, column:  0),  // up
-        new(row: -1, column:  1),  // up-right
-        new(row:  0, column:  1),  // right
-        new(row:  1, column:  1),  // right-down
-        new(row:  1, column:  0),  // down
-        new(row:  1, column: -1),  // down-left
-        new(row:  0, column: -1),  // left
-        new(row: -1, column: -1)   // left-up
+        new(row: -1, col:  0),  // up
+        new(row: -1, col:  1),  // up-right
+        new(row:  0, col:  1),  // right
+        new(row:  1, col:  1),  // right-down
+        new(row:  1, col:  0),  // down
+        new(row:  1, col: -1),  // down-left
+        new(row:  0, col: -1),  // left
+        new(row: -1, col: -1)   // left-up
     };
 
 
@@ -30,16 +30,18 @@ public class MaxMoves
         int rowsCount = movementMatrix.Length;
         int columnsCount = movementMatrix[0].Length;
 
-        (int startRow, int startColumn) = GetInitialPosition(movementMatrix);
+        var startPoint = GetInitialPosition(movementMatrix);
 
-        if (startRow == _invalidRowOrColumn)
+        // Começar com variáveis e depois mudar para Point
+        if (startPoint.Row == _invalidRowOrColumn)
             throw new ArgumentException("No initial position informed");
 
         int movementCount = 0;
         foreach (var direction in _directions)
         {
-            int currRow = startRow + direction.Row;
-            int currColumn = startColumn + direction.Column;
+            // alterar para Point
+            int currRow = startPoint.Row + direction.Row;
+            int currColumn = startPoint.Col + direction.Col;
 
             while (currRow >= 0 && currRow < rowsCount
             && currColumn >= 0 && currColumn < columnsCount
@@ -47,30 +49,34 @@ public class MaxMoves
             {
                 movementCount++;
                 currRow += direction.Row;
-                currColumn += direction.Column;
+                currColumn += direction.Col;
             }
         }
-
+        
         return movementCount;
     }
 
-    private static (int Row, int Column) GetInitialPosition(char[][] movementMatrix)
+    private static Point GetInitialPosition(char[][] movementMatrix)
     {
         for (int row = 0; row < movementMatrix.Length; row++)
         {
             for (int column = 0; column < movementMatrix[row].Length; column++)
             {
                 if (movementMatrix[row][column] == _initialPositionSimbol)
-                    return (row, column);
+                    return new(row, column);
             }
         }
 
-        return (_invalidRowOrColumn, _invalidRowOrColumn);
+        return new(_invalidRowOrColumn, _invalidRowOrColumn);
     }
 }
 
-public struct MatrixPosition(int row, int column)
+/// <param name="col">The Column index of the new Point</param>
+public struct Point(int row, int col)
 {
     public int Row = row;
-    public int Column = column;
+    /// <summary>
+    /// The column index of the Point.
+    /// </summary>
+    public int Col = col;
 }

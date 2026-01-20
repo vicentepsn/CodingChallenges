@@ -13,6 +13,8 @@ namespace CodingChallenges.MyArrays;
 /// </summary>
 public class ThreeSum
 {
+    // VER ÚLTIMA IMPLEMENTAÇÃO ABAIXO
+
     // Time Complexity: O(n^2) (complete is O(N*logN + N^2), only sorting is O(N*logN)). twoSumII is O(n), and we call it n times.
     // Space complexity: Ignoring the space required for the output array, the space complexity of the above algorithm will be O(n)
     //                   which is required for sorting.
@@ -36,6 +38,7 @@ public class ThreeSum
         return result;
     }
 
+    // only for reference of brute force
     public static IList<IList<int>> threeSum_NoSort(int[] nums)
     {
         var res = new HashSet<IList<int>>();
@@ -100,7 +103,7 @@ public class ThreeSum
         }
     }
 
-    // Java version from Grokking
+    /*// Java version from Grokking
 
     //public static List<List<Integer>> searchTriplets(int[] arr)
     //{
@@ -138,21 +141,43 @@ public class ThreeSum
     //        else
     //            right--; // we need a pair with a smaller sum
     //    }
-    //}
+    //}*/
 
-
-    public IList<IList<int>> ThreeSum2(int[] nums)
+    // 2025-12-31 => O(n²) => similar a primeira implementação acima, mas sem separar o código para uma outra função TwoSumII
+    public IList<IList<int>> ThreeSum_(int[] nums)
     {
-        IList<IList<int>> result = new List<IList<int>>();
         Array.Sort(nums);
 
+        var result = new List<IList<int>>();
         for (int i = 0; i < nums.Length - 2; i++)
         {
-            int target = -nums[i];
-            HashSet<int> seen = new HashSet<int>();
+            // devido a soma dos dois primeiros números sempre precisar do mesmo número para completar zero, depois de passar
+            // por um número pela primeira vez, se houver reptições desse primeiro nº como [-1,-1,2], ele não deve se repetir como primeiro número
+            // novamente, para garantir que não haverão triplets repetidos
+            if (i > 0 && nums[i - 1] == nums[i])
+                continue;
 
+            int left = i + 1;
+            int right = nums.Length - 1;
 
-            //int complement = -nums[i] 
+            while (left < right)
+            {
+                int soma = nums[i] + nums[left] + nums[right];
+                if (soma > 0)
+                    right--;
+                else if (soma < 0)
+                    left++;
+                else
+                {
+                    result.Add(new List<int>([nums[i], nums[left], nums[right]]));
+                    right--;
+                    left++;
+                    while (left < right && nums[right] == nums[right + 1])
+                        right--;
+                    while (left < right && nums[left] == nums[left - 1])
+                        left++;
+                }
+            }
         }
 
         return result;

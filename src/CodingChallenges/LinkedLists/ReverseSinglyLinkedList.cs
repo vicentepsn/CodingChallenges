@@ -1,10 +1,9 @@
-﻿using DataStructures;
-
+﻿using ListNode = DataStructures.SinglyLinkedListNodeII;
 namespace CodingChallenges.LinkedLists;
 
 public class ReverseSinglyLinkedList
 {
-    public static SinglyLinkedListNode Reverse(SinglyLinkedListNode llist)
+    public static ListNode Reverse(ListNode llist)
     {
         if (llist == null)
             return null;
@@ -12,8 +11,8 @@ public class ReverseSinglyLinkedList
         if (llist.next == null)
             return llist;
 
-        SinglyLinkedListNode lastNode = llist;
-        SinglyLinkedListNode currNode = llist.next;
+        ListNode lastNode = llist;
+        ListNode currNode = llist.next;
         lastNode.next = null;
 
         while (currNode.next != null)
@@ -53,17 +52,6 @@ public class ReverseSinglyLinkedList
         currNode.next = previousNode;
 
         return currNode;
-    }
-
-    public class ListNode
-    {
-        public int val;
-        public ListNode next;
-        public ListNode(int val = 0, ListNode next = null)
-        {
-            this.val = val;
-            this.next = next;
-        }
     }
 
 }

@@ -1,4 +1,5 @@
 ﻿using DataStructures;
+using ListNode = DataStructures.SinglyLinkedListNodeII;
 
 namespace CodingChallenges.LinkedLists.Test
 {
@@ -7,15 +8,15 @@ namespace CodingChallenges.LinkedLists.Test
         [Fact]
         public void Test01()
         {
-            SinglyLinkedListNode head = new SinglyLinkedListNode(1,
-                new SinglyLinkedListNode(2,
-                    new SinglyLinkedListNode(3,
-                        new SinglyLinkedListNode(4,
-                            new SinglyLinkedListNode(5)))));
+            ListNode head = new(1,
+                new ListNode(2,
+                    new ListNode(3,
+                        new ListNode(4,
+                            new ListNode(5)))));
 
             var result = ReverseSinglyLinkedList.Reverse(head);
 
-            Assert.Equal(5, result.data);
+            Assert.Equal(5, result.val);
         }
     }
 }

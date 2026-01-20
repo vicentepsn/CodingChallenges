@@ -26,4 +26,26 @@ public class MaxProfitClass
 
         return maxProfit;
     }
+
+    /// <summary>
+    /// Groups    : Array, DP?, Greedy?
+    /// Title     : 122. Best Time to Buy and Sell Stock II (considera quantas compras e vendas quiser)
+    /// Difficult : Medium
+    /// Link      : https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii
+    /// Approachs : -
+    /// </summary>
+    public int MaxProfitII(int[] prices)
+    {
+        int profit = 0;
+
+        for (int i = 1; i < prices.Length; i++)
+        {
+            if (prices[i] > prices[i - 1])
+            {
+                profit += prices[i] - prices[i - 1];
+            }
+        }
+
+        return profit;
+    }
 }

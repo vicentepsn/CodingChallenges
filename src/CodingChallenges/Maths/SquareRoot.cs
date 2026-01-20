@@ -1,64 +1,108 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace CodingChallenges.Maths;
 
-namespace CodingChallenges.Maths
+/// <summary>
+/// Groups    : Math
+/// Title     : 69. Sqrt(x)
+/// Difficult : Easy
+/// Link      : https://leetcode.com/problems/sqrtx
+/// Approach  : Binary Search
+/// </summary>
+public static class SquareRoot
 {
-    public static class SquareRoot
+    // O(log n)
+    public static int MySqrt_ChatGPT(int x)
     {
-        public static int CalcSquareRoot(int number)
+        if (x <= 1) return x;
+
+        int left = 1, right = x / 2, ans = 0;
+
+        while (left <= right)
         {
-            if (number < 2) return number;
+            int mid = left + (right - left) / 2;
+            long sq = (long)mid * mid;
 
-            int left = 2;
-            int right = number / 2;
-            int pivot;
-            long square; // use long to store result of pivot * pivot to prevent overflow
-
-            while (left <= right) // binary search for the square root
+            if (sq == x) return mid;
+            if (sq < x)
             {
-                pivot = left + (right - left) / 2;
-                square = (long)pivot * pivot;
-
-                if (square > number)
-                {
-                    right = pivot - 1;
-                }
-                else if (square < number)
-                {
-                    left = pivot + 1;
-                }
-                else
-                {
-                    return pivot;
-                }
+                ans = mid;
+                left = mid + 1;
             }
-
-            return right;
+            else
+            {
+                right = mid - 1;
+            }
         }
 
-        public static int mySqrt(int x)
+        return ans;
+    }
+    
+    // O(log n)
+    public static int MySqrt_NewtonsMethod(int x) // ChatGPT
+    {
+        if (x == 0) return 0;
+
+        long r = x; // usar long para evitar overflow
+        while (r * r > x)
         {
-            if (x < 2)
-                return x; // return x if it is 0 or 1
-
-            int left = 2, right = x / 2; // initialize left and right pointers
-            int pivot;
-            long num; // use long to store result of pivot * pivot to prevent overflow
-            while (left <= right)
-            { // binary search for the square root
-                pivot = left + (right - left) / 2; // find the middle element
-                num = (long)pivot * pivot;
-                if (num > x)
-                    right = pivot - 1; // if pivot * pivot is greater than x, set right to pivot - 1
-                else if (num < x)
-                    left = pivot + 1; // if pivot * pivot is less than x, set left to pivot + 1
-                else
-                    return pivot; // if pivot * pivot is equal to x, return pivot
-            }
-
-            return right; // return right after the loop
+            r = (r + x / r) / 2;
         }
+
+        return (int)r;
+    }
+
+
+    public static int CalcSquareRoot(int number)
+    {
+        if (number < 2) return number;
+
+        int left = 2;
+        int right = number / 2;
+        int pivot;
+        long square; // use long to store result of pivot * pivot to prevent overflow
+
+        while (left <= right) // binary search for the square root
+        {
+            pivot = left + (right - left) / 2;
+            square = (long)pivot * pivot;
+
+            if (square > number)
+            {
+                right = pivot - 1;
+            }
+            else if (square < number)
+            {
+                left = pivot + 1;
+            }
+            else
+            {
+                return pivot;
+            }
+        }
+
+        return right;
+    }
+
+    public static int mySqrt(int x)
+    {
+        if (x < 2)
+            return x; // return x if it is 0 or 1
+
+        int left = 2, right = x / 2; // initialize left and right pointers
+        int pivot;
+        long num; // use long to store result of pivot * pivot to prevent overflow
+        while (left <= right)
+        { // binary search for the square root
+            pivot = left + (right - left) / 2; // find the middle element
+            num = (long)pivot * pivot;
+            if (num > x)
+                right = pivot - 1; // if pivot * pivot is greater than x, set right to pivot - 1
+            else if (num < x)
+                left = pivot + 1; // if pivot * pivot is less than x, set left to pivot + 1
+            else
+                return pivot; // if pivot * pivot is equal to x, return pivot
+        }
+
+        return right; // return right after the loop
     }
 }
 
@@ -91,10 +135,10 @@ If 'num' is less than 'x', it means our 'pivot' is too small. So, we increase ou
 If 'num' equals 'x', it means we've found the exact square root, so we return 'pivot'.
 
 If we exit the while loop without returning (which means we didn't find an exact square root), we return 'right' as our final result, which will be the largest integer less than or equal to the square root of 'x'. 
- 
+
 Time Complexity
 The time complexity of the algorithm is O(logN) where N is the input number X because it uses binary search to find the square root.
 
 Space Complexity
 The space complexity is O(1) because it only uses a few variables to store the pointers (left, right, pivot, and num), and the size of these variables does not grow with the input size. 
- */
+*/

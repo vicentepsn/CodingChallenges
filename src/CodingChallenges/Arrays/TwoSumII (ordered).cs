@@ -29,7 +29,7 @@ namespace CodingChallenges.Arrays
             return new int[] { -1, -1 };
         }
 
-        // Using Binary Search (not tested)
+        // Using Binary Search
         public static int[] TwoSum_BS(int[] numbers, int target)
         {
             int low = 0, high = numbers.Length - 1;

@@ -54,21 +54,18 @@ namespace CodingChallenges.Arrays.Test
             Assert.Equal(expected, result);
         }
 
-        //[Fact]
-        //public void TestCase01()
-        //{
-        //    FirstMissingPositive firstMissingPositive = new FirstMissingPositive();
-        //    int[] numbers = { 1, 2, 3, 4, 5 };
-        //    int expected = 6;
+        [Theory(Timeout = 2000)]
+        [InlineData(6, new int[] { 1, 2, 3, 4, 5 })]
+        [InlineData(5, new int[] { 2, 3, 1, -4, 4 })]
+        [InlineData(4, new int[] { 2, -2, 3, 1, -4, -9, 8 })]
+        [InlineData(4, new int[] { 2, -2, 3, 3, 3, 1, -4, -9, 8 })]
+        [InlineData(1, new int[] { 7, 8, 9, 11, 12 })]
+        public async Task TestCase_20251219_v1(int expected, int[] numbers)
+        {
+            int result = await Task.Run(() => FirstMissingPositive.FirstMissingPositive_20251219_v2(numbers));
 
-        //    int result = firstMissingPositive.firstMissingPositive_myBetter(numbers);
-        //    int result2 = firstMissingPositive.firstMissingPositive_MyMoreSpace(numbers);
-        //    int result3 = firstMissingPositive.firstMissingPositive_new(numbers);
-
-        //    Assert.Equal(expected, result);
-        //    Assert.Equal(expected, result2);
-        //    Assert.Equal(expected, result3);
-        //}
+            Assert.Equal(expected, result);
+        }
 
         //[Fact]
         //public void TestCase02()

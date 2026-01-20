@@ -15,7 +15,7 @@ namespace CodingChallenges.Trees.Test
 
             var expected = 12;
             var counter = new CountCompleteTreeNodes();
-            var output = counter.CountNodes(tree);
+            var output = counter.CountNodes_ChatGPT(tree);
 
             Assert.Equal(expected, output);
         }
