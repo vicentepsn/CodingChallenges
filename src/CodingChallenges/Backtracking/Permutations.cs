@@ -7,7 +7,7 @@
 /// Link      : https://leetcode.com/problems/permutations
 /// Approachs : Backtracking
 /// </summary>
-public class Permutations // ChatGPT
+public class Permutations // CGPT
 {
     public IList<IList<int>> Permute(int[] nums)
     {

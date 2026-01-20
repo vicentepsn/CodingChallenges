@@ -32,7 +32,7 @@ public class FindMinimumInRotatedSortedArray
         return nums[right];
     }
 
-    public int FindMin_ChatGPT(int[] nums)
+    public int FindMin_CGPT(int[] nums)
     {
         int left = 0, right = nums.Length - 1;
 

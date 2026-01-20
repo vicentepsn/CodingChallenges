@@ -35,7 +35,7 @@ public class ZigzagConversion
     }
 
 
-    public static string Convert_ChatGPT(string s, int numRows)
+    public static string Convert_CGPT(string s, int numRows)
     {
         if (numRows == 1 || s.Length <= numRows)
             return s;

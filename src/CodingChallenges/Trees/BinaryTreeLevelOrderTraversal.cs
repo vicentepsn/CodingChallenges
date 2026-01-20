@@ -13,7 +13,7 @@ namespace CodingChallenges.Trees;
 public static class BinaryTreeLevelOrderTraversal
 {
     // Leetcode: Beats 100.00% / 37.06%
-    public static IList<IList<int>> LevelOrder_ChatGPT(TreeNode root)
+    public static IList<IList<int>> LevelOrder_CGPT(TreeNode root)
     {
         var result = new List<IList<int>>();
         if (root == null) return result;

@@ -10,7 +10,7 @@
 public static class SquareRoot
 {
     // O(log n)
-    public static int MySqrt_ChatGPT(int x)
+    public static int MySqrt_CGPT(int x)
     {
         if (x <= 1) return x;
 
@@ -37,7 +37,7 @@ public static class SquareRoot
     }
     
     // O(log n)
-    public static int MySqrt_NewtonsMethod(int x) // ChatGPT
+    public static int MySqrt_NewtonsMethod(int x) // CGPT
     {
         if (x == 0) return 0;
 

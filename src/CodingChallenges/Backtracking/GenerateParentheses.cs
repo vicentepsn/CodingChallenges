@@ -7,7 +7,7 @@
 /// Link      : https://leetcode.com/problems/generate-parentheses
 /// Approachs : Backtracking
 /// </summary>
-public class GenerateParentheses // ChatGPT
+public class GenerateParentheses // CGPT
 {
     public IList<string> GenerateParenthesis(int n)
     {

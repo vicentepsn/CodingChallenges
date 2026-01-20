@@ -80,13 +80,13 @@ public class NumberOf1Bits_MultiplasChamadas
     }
 }
 
-public class NumberOf1Bits_MultiplasChamadas_ChatGpt
+public class NumberOf1Bits_MultiplasChamadas_CGPT
 {
     // Tabela de lookup para todos os valores de 0 a 255
     private static readonly int[] bitCount = new int[256];
 
     // Construtor estático para preencher a tabela uma vez
-    static NumberOf1Bits_MultiplasChamadas_ChatGpt()
+    static NumberOf1Bits_MultiplasChamadas_CGPT()
     {
         for (int i = 0; i < 256; i++)
         {

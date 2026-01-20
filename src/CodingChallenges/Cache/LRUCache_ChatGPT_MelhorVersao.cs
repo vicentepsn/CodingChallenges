@@ -10,13 +10,13 @@ namespace CodingChallenges.Cache;
 /// Approach  : -
 /// Leetcode  : Beats 71.03% / 44.06%
 /// </summary>
-public class LRUCache_ChatGPT_MelhorVersao
+public class LRUCache_CGPT_MelhorVersao
 {
     private readonly int capacity;
     private readonly Dictionary<int, LinkedListNode<NodePayload>> cache;
     private readonly LinkedList<NodePayload> lruList;
 
-    public LRUCache_ChatGPT_MelhorVersao(int capacity)
+    public LRUCache_CGPT_MelhorVersao(int capacity)
     {
         this.capacity = capacity;
         cache = [];
@@ -67,13 +67,13 @@ public class LRUCache_ChatGPT_MelhorVersao
 }
 
 // Leetcode  : Beats 46.05% / 17.78%
-public class LRUCache_ChatGPT
+public class LRUCache_CGPT
 {
     private int capacity;
     private Dictionary<int, LinkedListNode<(int key, int value)>> cache;
     private LinkedList<(int key, int value)> lruList;
 
-    public LRUCache_ChatGPT(int capacity)
+    public LRUCache_CGPT(int capacity)
     {
         this.capacity = capacity;
         cache = new Dictionary<int, LinkedListNode<(int key, int value)>>();

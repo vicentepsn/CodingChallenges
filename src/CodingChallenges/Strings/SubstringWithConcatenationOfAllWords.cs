@@ -75,7 +75,7 @@ public class SubstringWithConcatenationOfAllWords
     }
 
     // Leetcode: Beats 95.41% / Beats 81.19%
-    public static List<int> FindSubstring_chatGPT(string s, string[] words) // 
+    public static List<int> FindSubstring_CGPT(string s, string[] words) // 
     {
         var resultado = new List<int>();
         if (words.Length == 0 || s.Length == 0) return resultado;

@@ -10,7 +10,7 @@
 /// </summary>
 public class LongestConsecutiveSequence
 {
-    // Usar abordagem do ChatGPT abaixo
+    // Usar abordagem do CGPT abaixo
     // O(n) / O(n)
     // Leetcode: 7.87% / 7.13%
     public static int LongestConsecutive(int[] nums)
@@ -60,7 +60,7 @@ public class LongestConsecutiveSequence
     // Abordagem: Insere todos os números em um HashSet depois percorre todos os números e conta somente a sequências dos números que iniciam uma sequência
     // O(n) / O(n)
     // Leetcode: 54.34% / 83.30%
-    public int LongestConsecutive_ChatGPT(int[] nums)
+    public int LongestConsecutive_CGPT(int[] nums)
     {
         if (nums.Length == 0) return 0;
 

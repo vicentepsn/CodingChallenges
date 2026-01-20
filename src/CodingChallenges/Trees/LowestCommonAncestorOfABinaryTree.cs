@@ -13,15 +13,15 @@ public class LowestCommonAncestorOfABinaryTree
 {
     // Versão bem melhor e mais enchuta! Usar essa
     // Leetcode: Beats 53.61% / 25.77%
-    public TreeNode LowestCommonAncestor_ChatGPT(TreeNode root, TreeNode p, TreeNode q)
+    public TreeNode LowestCommonAncestor_CGPT(TreeNode root, TreeNode p, TreeNode q)
     {
         if (root == null || root == p || root == q)
         {
             return root;
         }
 
-        TreeNode left = LowestCommonAncestor_ChatGPT(root.left, p, q);
-        TreeNode right = LowestCommonAncestor_ChatGPT(root.right, p, q);
+        TreeNode left = LowestCommonAncestor_CGPT(root.left, p, q);
+        TreeNode right = LowestCommonAncestor_CGPT(root.right, p, q);
 
         if (left != null && right != null)
         {

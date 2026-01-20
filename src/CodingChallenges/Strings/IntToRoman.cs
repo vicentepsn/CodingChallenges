@@ -73,7 +73,7 @@ public class IntToRoman
         return result.ToString();
     }
 
-    public static string ConvertIntToRomanNumerals_vChatGPT(int num)
+    public static string ConvertIntToRomanNumerals_vCGPT(int num)
     {
         if (num <= 0 || num > 3999)
             throw new ArgumentOutOfRangeException("numero", "O valor deve estar entre 1 e 3999.");

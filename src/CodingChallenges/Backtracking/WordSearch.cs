@@ -7,7 +7,7 @@
 /// Link      : https://leetcode.com/problems/word-search
 /// Approachs : Backtracking
 /// </summary>
-public class WordSearch // ChatGPT
+public class WordSearch // CGPT
 {
     public bool Exist(char[][] board, string word)
     {

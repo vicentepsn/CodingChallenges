@@ -9,7 +9,7 @@
 /// </summary>
 public class SnakesAndLaddersClass
 {
-    public int SnakesAndLadders(int[][] board) // versão do ChatGPT, usa BFS
+    public int SnakesAndLadders(int[][] board) // versão do CGPT, usa BFS
     {
         int n = board.Length;
         int target = n * n;

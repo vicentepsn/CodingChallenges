@@ -9,8 +9,8 @@
 /// </summary>
 public class PopulatingNextRightPointersInEachNodeII
 {
-    // BEST VERSION AT RUNTIME, mas com space O(n/2). Para space O(1), ver versão do ChatGPT abaixo
-    // MELHOR USAR A VERSÃO DO CHATGPT!!
+    // BEST VERSION AT RUNTIME, mas com space O(n/2). Para space O(1), ver versão do CGPT abaixo
+    // MELHOR USAR A VERSÃO DO CGPT!!
     // Leetcode: Beats 91.83% / 9.13% ==> 
     // O(n) / O(n / 2)
     public Node Connect(Node root) // v3
@@ -45,7 +45,7 @@ public class PopulatingNextRightPointersInEachNodeII
 
     // Leetcode: Beats 84.13% / 74.04%
     // O(n) / O(1)
-    public Node Connect_ChatGPT(Node root)
+    public Node Connect_CGPT(Node root)
     {
         if (root == null) return null;
 

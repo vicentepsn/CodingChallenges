@@ -7,7 +7,7 @@
 /// Link      : https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array
 /// Approachs : Binary Search
 /// </summary>
-public class FindFirstAndLastPosition // ChatGPT
+public class FindFirstAndLastPosition // CGPT
 {
     // O(max(k, log n)) => O(n) para buscar o K / O(1)
     // Leetcode: Beats 100.00% / 99.77%

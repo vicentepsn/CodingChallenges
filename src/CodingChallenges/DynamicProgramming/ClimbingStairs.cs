@@ -9,7 +9,7 @@
 /// </summary>
 public class ClimbingStairs
 {
-    public static int ClimbStairs(int n) // ChatGPT - Não entendi
+    public static int ClimbStairs(int n) // CGPT - Não entendi
     {
         if (n <= 2) return n;
 

@@ -47,7 +47,7 @@ public class CountCompleteTreeNodes
 
     // Leetcode: Beats 100.00% / 35.84%
     // O(log²N) / O(h) => h is the max hight of the tree
-    public int CountNodes_ChatGPT(TreeNode root)
+    public int CountNodes_CGPT(TreeNode root)
     {
         if (root == null) return 0;
 
@@ -56,10 +56,10 @@ public class CountCompleteTreeNodes
 
         // Subárvore esquerda é perfeita
         if (leftHeight == rightHeight)
-            return (1 << leftHeight) + CountNodes_ChatGPT(root.right); // O operador (1 << h) equivale a 2^h
+            return (1 << leftHeight) + CountNodes_CGPT(root.right); // O operador (1 << h) equivale a 2^h
 
         // Subárvore direita é perfeita
-        return (1 << rightHeight) + CountNodes_ChatGPT(root.left);
+        return (1 << rightHeight) + CountNodes_CGPT(root.left);
     }
 
     private int GetHeight(TreeNode node)

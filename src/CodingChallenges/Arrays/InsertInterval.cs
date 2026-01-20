@@ -123,7 +123,7 @@ public class InsertInterval
     }
 
     // Leetcode: Beats 98.97% / 17.24%
-    public int[][] Insert_ChatGPT(int[][] intervals, int[] newInterval)
+    public int[][] Insert_CGPT(int[][] intervals, int[] newInterval)
     {
         List<int[]> result = [];
         int i = 0;

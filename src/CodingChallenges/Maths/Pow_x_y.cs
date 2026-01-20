@@ -9,7 +9,7 @@
 /// </summary>
 public class Pow_x_y
 {
-    public double MyPow(double x, int n) // ChatGPT
+    public double MyPow(double x, int n) // CGPT
     {
         if (n == 0) return 1.0;
 

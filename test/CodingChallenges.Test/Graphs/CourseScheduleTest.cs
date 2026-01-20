@@ -10,7 +10,7 @@ public class CourseScheduleTest
 
         bool expected = true;
 
-        bool actual = CourseScheduleChatGPT.CanFinish(numCourses, prerequisites);
+        bool actual = CourseScheduleCGPT.CanFinish(numCourses, prerequisites);
 
         Assert.Equal(expected, actual);
     }

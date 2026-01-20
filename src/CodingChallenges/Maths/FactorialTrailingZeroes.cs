@@ -11,7 +11,7 @@ namespace CodingChallenges.Maths;
 /// </summary>
 public class FactorialTrailingZeroes
 {
-    public int TrailingZeroes(int n) // ChatGPT
+    public int TrailingZeroes(int n) // CGPT
     {
         int count = 0;
         while (n > 0)

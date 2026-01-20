@@ -67,7 +67,7 @@ public class SearchInRotatedSortedArray
         return right;
     }
 
-    public int Search_ChatGPT(int[] nums, int target)
+    public int Search_CGPT(int[] nums, int target)
     {
         int left = 0, right = nums.Length - 1;
 
@@ -107,7 +107,7 @@ public class SearchInRotatedSortedArray
     }
 }
 /*
-🧩 Estratégia do método "Search_ChatGPT"
+🧩 Estratégia do método "Search_CGPT"
 - O array é ordenado, mas pode estar rotacionado em algum ponto.
 - Precisamos de O(log n) → usar Binary Search modificado.
 - Ideia:

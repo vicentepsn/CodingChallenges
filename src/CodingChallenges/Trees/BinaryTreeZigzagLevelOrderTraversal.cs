@@ -12,7 +12,7 @@ namespace CodingChallenges.Trees;
 public class BinaryTreeZigzagLevelOrderTraversal
 {
     // Leetcode: Beats 100.00% / 23.28%
-    public IList<IList<int>> ZigzagLevelOrder_ChatGPT(TreeNode root)
+    public IList<IList<int>> ZigzagLevelOrder_CGPT(TreeNode root)
     {
         var result = new List<IList<int>>();
         if (root == null) return result;

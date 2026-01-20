@@ -7,7 +7,7 @@
 /// Link      : https://leetcode.com/problems/n-queens
 /// Approachs : Backtracking
 /// </summary>
-public class NQueens // ChatGPT
+public class NQueens // CGPT
 {
     public IList<IList<string>> SolveNQueens(int n)
     {

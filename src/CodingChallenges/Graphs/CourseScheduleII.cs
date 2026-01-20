@@ -10,7 +10,7 @@
 public class CourseScheduleII
 {
     // Leetcode: Beats 75.92% / 71.37%
-    // Versão gerada pelo ChatGPT.. não me preocupei em tentar entender
+    // Versão gerada pelo CGPT.. não me preocupei em tentar entender
     public int[] FindOrder(int numCourses, int[][] prerequisites)
     {
         // Grafo de adjacência

@@ -8,7 +8,7 @@
 /// Approachs : Kadane's Algorithm
 /// ATENÇÃO   : Essa solução combina Kadane’s Algorithm para máximo e mínimo, aproveitando a ideia de que o subarray circular é o complemento do subarray mínimo
 /// </summary>
-public class MaximumSumCircularSubarray // ChatGPT
+public class MaximumSumCircularSubarray // CGPT
 {
     // O(n) / O(1)
     // Leetcode: Beats 100.00% / 55.93%

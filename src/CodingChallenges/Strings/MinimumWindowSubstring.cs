@@ -86,7 +86,7 @@ public class MinimumWindowSubstring
     }
 
     // Leetcode: Beats 61.83% / 62.77%
-    public string MinWindow_ChatGPT(string s, string t)
+    public string MinWindow_CGPT(string s, string t)
     {
         if (string.IsNullOrEmpty(s) || string.IsNullOrEmpty(t) || s.Length < t.Length)
             return "";

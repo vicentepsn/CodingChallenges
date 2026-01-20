@@ -47,7 +47,7 @@ public class BinarySearchTreeIterator // Leetcode: class name = "BSTIterator"
         => nodeStack.Count > 0;
 }
 
-// ChatGPT
+// CGPT
 public class BSTIterator
 {
     private Stack<TreeNode> stack;

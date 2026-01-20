@@ -9,7 +9,7 @@ namespace CodingChallenges.Matrix;
 /// Link      : https://leetcode.com/problems/number-of-islands/
 /// Approach  : BFS (Breadth First Search) / DFS
 /// </summary>
-/// USAR A VERSÃO DO CHATGPT ABAIXO QUE É MAIS EFICIENTE
+/// USAR A VERSÃO DO CGPT ABAIXO QUE É MAIS EFICIENTE
 public class NumberOfIslands
 {
     private static readonly int[][] directions =
@@ -196,7 +196,7 @@ public class NumberOfIslandsV2
 }
 
 // Leetcode: Beats 84.57% / 85.06%
-public class NumberOfIslandsChatGPT
+public class NumberOfIslandsCGPT
 {
     const char unnexploredLand = '1';
     const char water = '0';
@@ -225,7 +225,7 @@ public class NumberOfIslandsChatGPT
         return count;
     }
 
-    private void ExploreIsland(char[][] grid, int row, int col) // ChatGPT nomeou essa função como "DFS" (Deep-First Search)
+    private void ExploreIsland(char[][] grid, int row, int col) // CGPT nomeou essa função como "DFS" (Deep-First Search)
     {
         int rows = grid.Length;
         int cols = grid[0].Length;

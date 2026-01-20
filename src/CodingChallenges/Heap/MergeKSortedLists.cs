@@ -14,7 +14,7 @@ public class MergeKSortedLists
 {
     // O(N\log k) / O(k)
     // Leetcode: Beats 63.79% / 38.52%
-    public ListNode MergeKLists(ListNode[] lists) // ChatGPT
+    public ListNode MergeKLists(ListNode[] lists) // CGPT
     {
         if (lists == null || lists.Length == 0) return null;
 

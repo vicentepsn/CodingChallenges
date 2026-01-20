@@ -43,7 +43,7 @@ public class AverageOfLevelsInBinaryTree
     }
 
     // Leetcode: Beats 96.13% / 40.33%
-    public IList<double> AverageOfLevels_ChatGPT(TreeNode root)
+    public IList<double> AverageOfLevels_CGPT(TreeNode root)
     {
         var result = new List<double>();
         if (root == null) return result;

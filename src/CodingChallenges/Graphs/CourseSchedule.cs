@@ -375,7 +375,7 @@ public class CourseSchedule
 }
 
 
-public class CourseScheduleChatGPT
+public class CourseScheduleCGPT
 {
     public static bool CanFinish(int numCourses, int[][] prerequisites)
     {

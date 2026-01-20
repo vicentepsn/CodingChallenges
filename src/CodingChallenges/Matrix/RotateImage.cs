@@ -71,7 +71,7 @@ public class RotateImage
     }
 
     // Leetcode: Beats 100% / 79.06%
-    public void Rotate_ChatGPT(int[][] matrix)
+    public void Rotate_CGPT(int[][] matrix)
     {
         int n = matrix.Length;
 

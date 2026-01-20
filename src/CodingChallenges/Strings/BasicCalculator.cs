@@ -12,7 +12,7 @@ namespace CodingChallenges.Strings;
 public class BasicCalculator
 {
     // Leetcode: Beats 100.00% / 58.06%
-    public int Calculate_ChatGPT(string s)
+    public int Calculate_CGPT(string s)
     {
         int result = 0;
         int sign = 1; // 1 para positivo, -1 para negativo

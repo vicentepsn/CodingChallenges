@@ -7,7 +7,7 @@
 /// Link      : https://leetcode.com/problems/construct-quad-tree
 /// Approachs : Divide and Conquer
 /// </summary>
-public class QuadTreeContruction // ChatGPT
+public class QuadTreeContruction // CGPT
 {
     public Node Construct(int[][] grid)
     {

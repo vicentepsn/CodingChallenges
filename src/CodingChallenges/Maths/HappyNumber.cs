@@ -39,7 +39,7 @@ public class HappyNumber
     }
 
     // Leetcode: Beats 61.27% / 57.57%
-    public static bool IsHappy_ChatGPT(int n)
+    public static bool IsHappy_CGPT(int n)
     {
         HashSet<int> seen = [];
 
