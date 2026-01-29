@@ -12,7 +12,48 @@ namespace CodingChallenges.Graphs;
 /// </summary>
 public class NetworkDelayTime
 {
+    private const int INFINITY = int.MaxValue;
     // using PriorityQueue
+    // Leetcode: Beats 76.70% / 36.89%
+    public int NetworkDelayTime_new20260126(int[][] times, int n, int k)
+    {
+        var grafo = new List<(int target, int time)>[n];
+        var nodesTime = new int[n];
+
+        for (int i = 0; i < n; i++)
+        {
+            nodesTime[i] = INFINITY;
+            grafo[i] = [];
+        }
+        nodesTime[k - 1] = 0;
+
+        foreach (int[] time in times)
+            grafo[time[0] - 1].Add(new(time[1] - 1, time[2]));
+
+        var queue = new PriorityQueue<int, int>();
+        queue.Enqueue(k - 1, 0);
+
+        while (queue.Count > 0)
+        {
+            int currNodeIdx = queue.Dequeue();
+
+            foreach (var (targetIdx, time) in grafo[currNodeIdx])
+            {
+                int newTime = nodesTime[currNodeIdx] + time;
+                if (newTime < nodesTime[targetIdx])
+                {
+                    nodesTime[targetIdx] = newTime;
+                    queue.Enqueue(targetIdx, newTime);
+                }
+            }
+        }
+
+        int minNetwordDelay = nodesTime.Max();
+        if (minNetwordDelay == INFINITY)
+            return -1;
+        return minNetwordDelay;
+    }
+
     public static int networkDelayTime(int[][] times, int n, int k)
     {
         var distances = new int[n];
@@ -108,6 +149,8 @@ public class NetworkDelayTime
 
         return closedCount == n ? delayTime : -1;
     }
+
+
 }
 
 public class DistancesComparer : Comparer<(int v, int w)>

@@ -34,4 +34,26 @@ public class AlienAlphabeticOrderTest
 
         Assert.Equal(expected, output);
     }
+
+    [Fact]
+    public void Teste04()
+    {
+        string[] imput = ["abc", "bcd", "cde"];
+        char[] expected = ['a', 'b', 'c', 'd', 'e'];
+
+        var output = AlienAlphabeticOrder.GetAlianAlphabeticOrder(imput);
+
+        Assert.Equal(expected, output);
+    }
+
+    [Fact]
+    public void Teste05()
+    {
+        string[] imput = ["wrtkj", "wrt"];
+        char[] expected = [];
+
+        var output = AlienAlphabeticOrder.GetAlianAlphabeticOrder(imput);
+
+        Assert.Equal(expected, output);
+    }
 }
