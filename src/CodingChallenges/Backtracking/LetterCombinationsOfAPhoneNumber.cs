@@ -7,7 +7,7 @@
 /// Link      : https://leetcode.com/problems/letter-combinations-of-a-phone-number
 /// Approachs : Backtracking
 /// </summary>
-public class LetterCombinationsOfAPhoneNumber // CGPT
+public class LetterCombinationsOfAPhoneNumber // CG
 {
     private Dictionary<char, string> phoneMap = new Dictionary<char, string> {
         {'2',"abc"},

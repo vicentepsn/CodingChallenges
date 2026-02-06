@@ -7,7 +7,7 @@
 /// Link      : https://leetcode.com/problems/ipo
 /// Approach  : Heap
 /// </summary>
-public class IPO // CGPT
+public class IPO // CG
 {
     public static int FindMaximizedCapital(int k, int w, int[] profits, int[] capital)
     {

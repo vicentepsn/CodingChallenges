@@ -5,11 +5,11 @@
 /// Title     : 70. Climbing Stairs
 /// Difficult : Easy
 /// Link      : https://leetcode.com/problems/climbing-stairs
-/// Approach  : -
+/// Approach  : DP
 /// </summary>
 public class ClimbingStairs
 {
-    public static int ClimbStairs(int n) // CGPT - Não entendi
+    public static int ClimbStairs(int n) // CG - Não entendi
     {
         if (n <= 2) return n;
 

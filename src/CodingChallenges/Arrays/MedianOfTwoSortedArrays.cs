@@ -11,7 +11,7 @@
 public class MedianOfTwoSortedArrays
 {
     // Leetcode: Beats 100.00% / 55.90%
-    // Versão gerada pelo CGPT.. não me preocupei em tentar entender
+    // Versão gerada pelo CG.. não me preocupei em tentar entender
     public double FindMedianSortedArrays(int[] nums1, int[] nums2)
     {
         // Garantir que nums1 seja a menor array

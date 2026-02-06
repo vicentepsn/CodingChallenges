@@ -7,7 +7,7 @@
 /// Link      : https://leetcode.com/problems/n-queens-ii
 /// Approachs : Backtracking
 /// </summary>
-public class NQueensII // CGPT
+public class NQueensII // CG
 {
     public int TotalNQueens(int n)
     {

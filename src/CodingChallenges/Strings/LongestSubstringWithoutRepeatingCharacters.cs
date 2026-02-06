@@ -7,7 +7,7 @@
 /// Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
 /// Approach: Sliding Window
 /// </summary>
-public static class LengthOfLongestSubstring
+public static class LongestSubstringWithoutRepeatingCharacters
 {
     // Leetcode: Runtime => Beats 99.17% / Memory => Beats 30.78%
     public static int GetLengthOfLongestSubstring(string s)

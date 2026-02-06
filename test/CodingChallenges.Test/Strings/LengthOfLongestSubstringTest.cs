@@ -8,7 +8,7 @@
             string input = "acabcbdca";
             int expected = 4;
 
-            var output = LengthOfLongestSubstring.GetLengthOfLongestSubstring(input);
+            var output = LongestSubstringWithoutRepeatingCharacters.GetLengthOfLongestSubstring(input);
 
             Assert.Equal(expected, output);
         }
@@ -19,7 +19,7 @@
             string input = "abcabcbb";
             int expected = 3;
 
-            var output = LengthOfLongestSubstring.GetLengthOfLongestSubstring(input);
+            var output = LongestSubstringWithoutRepeatingCharacters.GetLengthOfLongestSubstring(input);
 
             Assert.Equal(expected, output);
         }
@@ -30,7 +30,7 @@
             string input = "bbbbb";
             int expected = 1;
 
-            var output = LengthOfLongestSubstring.GetLengthOfLongestSubstring(input);
+            var output = LongestSubstringWithoutRepeatingCharacters.GetLengthOfLongestSubstring(input);
 
             Assert.Equal(expected, output);
         }
@@ -41,7 +41,7 @@
             string input = "pwwkew";
             int expected = 3;
 
-            var output = LengthOfLongestSubstring.GetLengthOfLongestSubstring(input);
+            var output = LongestSubstringWithoutRepeatingCharacters.GetLengthOfLongestSubstring(input);
 
             Assert.Equal(expected, output);
         }

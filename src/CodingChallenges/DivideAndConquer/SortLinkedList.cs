@@ -9,7 +9,7 @@ namespace CodingChallenges.DivideAndConquer;
 /// Link      : https://leetcode.com/problems/sort-list
 /// Approachs : Divide and Conquer
 /// </summary>
-public class SortLinkedList // CGPT
+public class SortLinkedList // CG
 {
     public static ListNode SortList(ListNode head)
     {

@@ -37,7 +37,7 @@ public static class SquareRoot
     }
     
     // O(log n)
-    public static int MySqrt_NewtonsMethod(int x) // CGPT
+    public static int MySqrt_NewtonsMethod(int x) // CG
     {
         if (x == 0) return 0;
 

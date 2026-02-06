@@ -7,7 +7,7 @@
 /// Link      : https://leetcode.com/problems/combinations
 /// Approachs : Backtracking
 /// </summary>
-public class Combinations // CGPT
+public class Combinations // CG
 {
     public IList<IList<int>> Combine(int n, int k)
     {

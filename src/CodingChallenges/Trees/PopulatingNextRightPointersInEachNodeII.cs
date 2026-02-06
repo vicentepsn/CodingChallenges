@@ -9,8 +9,8 @@
 /// </summary>
 public class PopulatingNextRightPointersInEachNodeII
 {
-    // BEST VERSION AT RUNTIME, mas com space O(n/2). Para space O(1), ver versão do CGPT abaixo
-    // MELHOR USAR A VERSÃO DO CGPT!!
+    // BEST VERSION AT RUNTIME, mas com space O(n/2). Para space O(1), ver versão do CG abaixo
+    // MELHOR USAR A VERSÃO DO CG!!
     // Leetcode: Beats 91.83% / 9.13% ==> 
     // O(n) / O(n / 2)
     public Node Connect(Node root) // v3

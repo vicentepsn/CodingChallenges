@@ -15,7 +15,7 @@ public class MinimumAbsoluteDifferenceInBST
     private TreeNode prev = null;
 
     // Leetcode: Beats 100.00% / 74.29%
-    // CGPT
+    // CG
     public int GetMinimumDifference(TreeNode root)
     {
         InOrder(root);

@@ -10,7 +10,7 @@
 public class EvaluateDivision
 {
     // Leetcode: Beats 69.95% / 83.94%
-    // Versão gerada pelo CGPT, Muito complicado.. nem me preocupei em tentar entender
+    // Versão gerada pelo CG, Muito complicado.. nem me preocupei em tentar entender
     public double[] CalcEquation(IList<IList<string>> equations, double[] values, IList<IList<string>> queries)
     {
         // Grafo: cada variável mapeia para seus vizinhos e pesos

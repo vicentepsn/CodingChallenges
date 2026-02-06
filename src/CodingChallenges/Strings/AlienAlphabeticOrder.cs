@@ -7,7 +7,7 @@
 /// </remarks>
 public class AlienAlphabeticOrder
 {
-    public string AlienOrder(string[] words) // CGPT
+    public string AlienOrder(string[] words) // CG
     {
         var graph = new Dictionary<char, HashSet<char>>();
         var indegree = new Dictionary<char, int>();

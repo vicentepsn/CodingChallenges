@@ -7,7 +7,7 @@
 /// Link      : https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 /// Approachs : Kadane's Algorithm
 /// </summary>
-public class MaximumSubarray // CGPT
+public class MaximumSubarray // CG
 {
     // O(n) / O(1)
     // Leetcode: Beats 100.00% / 8.47%
@@ -27,7 +27,7 @@ public class MaximumSubarray // CGPT
 }
 
 // O(n log n) / O(log n)
-public class SolutionDivideAndConquer // CGPT
+public class SolutionDivideAndConquer // CG
 {
     public int MaxSubArray(int[] nums)
     {

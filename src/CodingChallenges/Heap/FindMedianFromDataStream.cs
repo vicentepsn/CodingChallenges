@@ -7,7 +7,7 @@
 /// Link      : https://leetcode.com/problems/find-median-from-data-stream
 /// Approach  : Heap
 /// Leetcode  : Beats 96.49% / 19.30%
-/// ATENÇÃO   : A VERSÃO GERADA PELO CGPT ABAIXO É MAIS SIMPLES, USAR ELA PRIMEIRO, CASO QUEIRA OTIMIZAR, USAR A MINHA VERSÃO (A FindMedianFromDataStream)
+/// ATENÇÃO   : A VERSÃO GERADA PELO CG ABAIXO É MAIS SIMPLES, USAR ELA PRIMEIRO, CASO QUEIRA OTIMIZAR, USAR A MINHA VERSÃO (A FindMedianFromDataStream)
 /// </summary>
 public class FindMedianFromDataStream
 {
@@ -76,7 +76,7 @@ public class FindMedianFromDataStream
  * double param_2 = obj.FindMedian();
  */
 
-// CGPT version
+// CG version
 // Leetcode  : Beats 35.96% / 43.57%
 public class MedianFinder
 {

@@ -10,7 +10,7 @@
 /// MUITO SEMELHANTE AO DA CLASSE WordLadder
 public class MinimumGeneticMutation
 {
-    // Versão gerada pelo CGPT
+    // Versão gerada pelo CG
     public int MinMutation(string startGene, string endGene, string[] bank)
     {
         HashSet<string> bankSet = [..bank];

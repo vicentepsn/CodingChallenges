@@ -10,7 +10,7 @@
 public class MinimumCostToReachDestinationInTime
 {
     // O((V + E) log V) / O(V + E) (adjacency list + estruturas)
-    public int MinCost(int maxTime, int[][] edges, int[] passingFees) // CGPT
+    public int MinCost(int maxTime, int[][] edges, int[] passingFees) // CG
     {
         /*Dictionary<string, int> edgesDistance = 
             edges.ToDictionary(a => a[0] < a[1] ? $"{a[0]}/{[1]}" : $"{a[1]}/{[0]}", b => b[2]);

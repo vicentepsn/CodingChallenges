@@ -12,7 +12,7 @@ namespace CodingChallenges.Graphs;
 public class ReconstructItinerary
 {
     // O(E log E), onde E = número de tickets (devido ao uso de min-heap). / O(E) para armazenar o grafo.
-    public static IList<string> FindItinerary(IList<IList<string>> tickets) // CGPT
+    public static IList<string> FindItinerary(IList<IList<string>> tickets) // CG
     {
         // Grafo: origem -> min-heap de destinos
         var graph = new Dictionary<string, PriorityQueue<string, string>>();
@@ -51,7 +51,7 @@ public class ReconstructItinerary
     }
 
     // Versão iterativa com milha, mesma idéia da de cima
-    public IList<string> FindItinerary_vIterativa(IList<IList<string>> tickets) // CGPT
+    public IList<string> FindItinerary_vIterativa(IList<IList<string>> tickets) // CG
     {
         var graph = new Dictionary<string, PriorityQueue<string, string>>();
         foreach (var t in tickets)

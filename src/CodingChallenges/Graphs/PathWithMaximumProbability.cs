@@ -11,7 +11,7 @@ public class PathWithMaximumProbability
 {
     // O((V + E) log V) / O(V + E) (adjacency list + estruturas)
     // Leetcode: Beats 72.22% / 20.37%
-    public double MaxProbability(int n, int[][] edges, double[] succProb, int start_node, int end_node) // No CGPT
+    public double MaxProbability(int n, int[][] edges, double[] succProb, int start_node, int end_node) // No CG
     {
         var graph = new List<(int neighbor, double succProb)>[n];
 

@@ -15,7 +15,7 @@ public class KthSmallestElementInBST
     private int result = -1;
 
     // Leetcode: Beats 100.00% / 78.27%
-    // CGPT
+    // CG
     public int KthSmallest(TreeNode root, int k)
     {
         InOrder(root, k);

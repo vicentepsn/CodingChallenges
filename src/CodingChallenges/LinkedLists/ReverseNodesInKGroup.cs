@@ -14,7 +14,7 @@ public class ReverseNodesInKGroup
     // A MINHA VERSÃO ABAIXO ESTÁ MAIS FÁCIL DE EXPLICAR EM UMA ENTREVISTA
 
     // Leetcode: Beats 32.82% / 76.34%
-    // CGPT version em 2026-01-06
+    // CG version em 2026-01-06
     public ListNode ReverseKGroup_CGPT(ListNode head, int k)
     {
         if (head == null || k == 1) return head;

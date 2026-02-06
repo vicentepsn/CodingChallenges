@@ -9,7 +9,7 @@
 /// </summary>
 public class Pow_x_y
 {
-    public double MyPow(double x, int n) // CGPT
+    public double MyPow(double x, int n) // CG
     {
         if (n == 0) return 1.0;
 

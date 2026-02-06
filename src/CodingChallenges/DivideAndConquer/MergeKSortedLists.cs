@@ -14,7 +14,7 @@ public class MergeKSortedLists
 {
     // O(N\log k) / O(k)
     // Leetcode: Beats 98.22% / 77.40%
-    public ListNode MergeKLists(ListNode[] lists) // CGPT
+    public ListNode MergeKLists(ListNode[] lists) // CG
     {
         if (lists == null || lists.Length == 0) return null;
         return MergeLists(lists, 0, lists.Length - 1);

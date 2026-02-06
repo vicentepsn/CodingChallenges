@@ -10,7 +10,7 @@
 /// </summary>
 public class LongestConsecutiveSequence
 {
-    // Usar abordagem do CGPT abaixo
+    // Usar abordagem do CG abaixo
     // O(n) / O(n)
     // Leetcode: 7.87% / 7.13%
     public static int LongestConsecutive(int[] nums)

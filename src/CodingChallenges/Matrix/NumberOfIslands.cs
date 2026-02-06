@@ -9,7 +9,7 @@ namespace CodingChallenges.Matrix;
 /// Link      : https://leetcode.com/problems/number-of-islands/
 /// Approach  : BFS (Breadth First Search) / DFS
 /// </summary>
-/// USAR A VERSÃO DO CGPT ABAIXO QUE É MAIS EFICIENTE
+/// USAR A VERSÃO DO CG ABAIXO QUE É MAIS EFICIENTE
 public class NumberOfIslands
 {
     private static readonly int[][] directions =
@@ -225,7 +225,7 @@ public class NumberOfIslandsCGPT
         return count;
     }
 
-    private void ExploreIsland(char[][] grid, int row, int col) // CGPT nomeou essa função como "DFS" (Deep-First Search)
+    private void ExploreIsland(char[][] grid, int row, int col) // CG nomeou essa função como "DFS" (Deep-First Search)
     {
         int rows = grid.Length;
         int cols = grid[0].Length;

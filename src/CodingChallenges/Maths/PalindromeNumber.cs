@@ -12,7 +12,7 @@ public class PalindromeNumber
     // Versão sem converter para string
     // O(log n) base 10 / O(1)
     // Leetcode: Beats 99.55% / 94.79%
-    public bool IsPalindrome(int x) // CGPT
+    public bool IsPalindrome(int x) // CG
     {
         // Números negativos ou múltiplos de 10 (exceto 0) não são palíndromos
         if (x < 0 || (x % 10 == 0 && x != 0)) return false;
