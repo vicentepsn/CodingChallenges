@@ -21,7 +21,6 @@ public class WaterFlowClass
                 if (seen[row][col])
                     continue;
 
-                seen[row][col] = true;
                 result[row][col] = GetMinHeight(heighMap, row, col, result, seen);
             }
         }
@@ -37,6 +36,7 @@ public class WaterFlowClass
 
     private static int GetMinHeight(int[][] heighMap, int row, int col, int[][] result, bool[][] seen)
     {
+        seen[row][col] = true;
         int nextRow = row, nextCol = col;
         int minHeight = heighMap[row][col];
 
@@ -49,7 +49,7 @@ public class WaterFlowClass
             {
                 if (heighMap[currRow][currCol] < minHeight)
                 {
-                    minHeight = heighMap[currRow][currCol]; // <= fixed (added)
+                    minHeight = heighMap[currRow][currCol];
                     nextRow = currRow;
                     nextCol = currCol;
                 }
@@ -60,7 +60,7 @@ public class WaterFlowClass
             return heighMap[row][col];
 
         if (seen[nextRow][nextCol])
-            return result[nextRow][nextCol]; // <= fixed (before was "minHeight[nextRow][nextRow];")
+            return result[nextRow][nextCol];
 
         return GetMinHeight(heighMap, nextRow, nextCol, result, seen);
     }
